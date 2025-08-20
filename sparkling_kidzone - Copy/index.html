@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SPBZ — Kids Clothing</title>
+  <link rel="icon" type="image/png" href="/e/logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">
+   <img src="/e/logo.png" alt="Logo" class="logo-img">
+        <!-- <span>Sparkling Pieces by Zee </span> -->
+         <h1 class="brand-name">Sparkling Pieces <br> <span>by Zee</span></h1>
+      </a>
+
+      <nav class="nav">
+        <a href="#collections">Collections</a>
+        <a href="#best">Best Sellers</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn ghost">Sign in</button>
+<!-- Cart Toggle Button -->
+<button class="btn primary" id="cart-toggle" class="cart-btn">🛒 Cart (0)</button>
+
+<!-- Sidebar Cart -->
+<div id="cart-sidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <button id="close-cart">✖</button>
+  </div>
+  <div id="cart-items" class="cart-items"></div>
+  <div class="cart-footer">
+    <p id="cart-total">Total: $0.00</p>
+    <button id="checkout-btn" class="btn primary" onclick="window.location.href='checkout.html'">Checkout</button>
+  </div>
+</div>
+
+<!-- Overlay -->
+<div id="cart-overlay" class="cart-overlay"></div>
+
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Bright, comfy clothes for curious little stars</h1>
+          <p>Ethically made, playful designs, soft fabrics — perfect for toddlers and kids.</p>
+          <div class="hero-ctas">
+            <a class="btn large primary" href="#collections">Shop Collections</a>
+            <a class="btn large ghost" href="#about">Learn More</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <!-- product spotlight -->
+          <div class="product-spot">
+            <svg class="toy" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="10" y="20" width="80" height="60" rx="10" fill="#FFF2F8"/>
+              <circle cx="35" cy="45" r="10" fill="#FFE4F0"/>
+              <circle cx="65" cy="45" r="10" fill="#FFD1E6"/>
+              <text x="50" y="85" text-anchor="middle" font-size="10" fill="#8A2BE2">Soft Onesie</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="collections" class="container collections">
+      <h2>Collections</h2>
+      <div class="grid collections-grid" id="collections-grid">
+        <!-- JS will inject collection cards -->
+      </div>
+          </section>
+
+    <section id="best" class="container best-sellers">
+      <h2>Best Sellers</h2>
+      <div class="grid product-grid" id="product-grid">
+        <!-- JS will inject product cards -->
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>About Sparkling Pieces by Zee</h2>
+      <p>We design bright, comfortable clothing that lets kids explore without limits. Our fabrics are tested for softness and durability.</p>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact Us</h2>
+      <form id="contact-form" class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! We received your message.');">
+        <label>
+          Your name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button class="btn primary" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Sparkling Pieces by Zee</strong>
+        <p>Playful clothes. Gentle fabrics. Happy kids.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <a href="#collections">Collections</a><br/>
+        <a href="#best">Best Sellers</a><br/>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <p>Instagram · Facebook · Pinterest</p>
+      </div>
+    </div>
+    <div class="credit">© <span id="year"></span> Sparkling Pieces by Zee</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

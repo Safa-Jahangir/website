@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin — Sparkling Kidzone</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* minimal fallback styles in case style.css isn’t present */
+    body { font-family: system-ui, Arial, sans-serif; margin: 20px; }
+    h1 { margin-bottom: 12px; }
+    .toolbar { display:flex; gap:8px; align-items:center; margin: 12px 0 20px; }
+    .btn { padding: 8px 12px; border: 1px solid #ddd; border-radius: 8px; cursor: pointer; }
+    .btn:hover { background: #f3f3f3; }
+    .muted { color:#666; font-size: 14px; }
+    table { width:100%; border-collapse: collapse; }
+    th, td { border:1px solid #e5e5e5; padding:8px; vertical-align: top; }
+    thead th { background:#fafafa; text-align:left; }
+    .empty { padding:18px; text-align:center; color:#666; border:1px dashed #ddd; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>🛒 Admin — Orders</h1>
+
+  <div class="toolbar">
+    <button class="btn" id="refresh-btn">Refresh</button>
+    <span class="muted" id="status-text">Ready</span>
+  </div>
+
+  <table id="orders-table">
+    <thead>
+      <tr>
+        <th style="width:60px;">ID</th>
+        <th style="width:180px;">Customer</th>
+        <th>Items</th>
+        <th style="width:120px;">Payment</th>
+        <th style="width:120px;">Status</th> <!-- shows "-" if not present -->
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="empty" id="empty-state" style="display:none;">No orders yet.</div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
